@@ -1,0 +1,13 @@
+.focus-ext-picker:hover {
+	background-color: yellow !important;
+	cursor: pointer !important;
+}
+
+.focus-ext-toast {
+	display: flex;
+	align-items: center;
+}
+
+.focus-ext-toast .toastify-avatar {
+	margin-right: 10px;
+}

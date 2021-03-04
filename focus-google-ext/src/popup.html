@@ -1,0 +1,122 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Focus Tools</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<script src="../assets/jquery.js"></script>
+
+	<style>
+		html,
+		body {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 14px;
+			margin: 0;
+			min-height: 180px;
+			padding: 0;
+			width: 384px;
+		}
+
+		h1 {
+			font-family: 'Menlo', monospace;
+			font-size: 22px;
+			font-weight: 400;
+			margin: 0;
+			color: #2f5876
+		}
+
+		img {
+			width: 30px;
+		}
+
+		.modal-header {
+			display: flex;
+			justify-content: center;
+			border-bottom: 0.5px solid #dadada;
+		}
+
+		.modal-content {
+			height: 50px;
+			width: 100%;
+		}
+
+		.logo {
+			padding: 16px;
+		}
+
+		.logo-icon {
+			vertical-align: text-bottom;
+			margin-right: 12px;
+		}
+
+		.version {
+			color: #444;
+			font-size: 18px;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 10px 22px;
+		}
+
+		.flex {
+			opacity: 1;
+			display: flex;
+			flex-grow: 1;
+			padding: 5px;
+			cursor: pointer;
+			align-items: center;
+			transition: opacity 0.2s ease-in-out;
+		}
+
+		.flex:hover {
+			opacity: 0.4;
+		}
+
+		.flex .fa {
+			font-size: 25px;
+			margin-right: 5px;
+			color: #2f5876;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="modal-header">
+		<h1 class="logo">
+			<img src="../images/icon_128.png" alt="Focus" class="logo-icon">
+			Focus Tools
+			<span class="version">Loading...</span>
+		</h1>
+	</div>
+	<div class="modal-content">
+		<div class="flex-container">
+			<div data-method="record-picker" class="flex utility">
+				<i class="fa fa-table"></i> DataTable Record - ID Copy
+			</div>
+
+			<div data-method="detail-picker" class="flex utility">
+				<i class="fa fa-table"></i> DataTable Detail - ID Copy
+			</div>
+
+			<div data-method="swiftbox-picker" class="flex utility">
+				<i class="fa fa-caret-square-o-down"></i> Swiftbox - Value Copy
+			</div>
+
+			<div data-method="swiftbox-text-picker" class="flex utility">
+				<i class="fa fa-caret-square-o-down"></i> Swiftbox - Text Copy
+			</div>
+		</div>
+	</div>
+
+	<script src="popup.js"></script>
+</body>
+
+</html>

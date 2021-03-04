@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Focus Tools",
+	"description": "Tools for internal Focus to use",
+	"version": "1.0.2",
+	"icons": {
+		"16": "./images/icon_16.png",
+		"48": "./images/icon_48.png",
+		"128": "./images/icon_128.png"
+	},
+	"browser_action": {
+		"default_title": "Focus Tools",
+		"default_icon": "./images/icon.png",
+		"default_popup": "./src/popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css"    : ["./assets/toast.css", "./src/content.css"],
+			"js"     : ["./assets/jquery.js", "./assets/toast.js", "./src/content.js"]
+		}
+	],
+	"web_accessible_resources": ["images/icon_16.png"],
+	"permissions": ["activeTab"]
+}
